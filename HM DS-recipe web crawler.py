@@ -1,12 +1,14 @@
+#version 2
+import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-import pandas as pd
+
 pd.set_option("display.max_rows", None, "display.max_columns", None)
 
-urls = ["https://leomoon173.pixnet.net/blog/post/6777691", 
-        "https://leomoon173.pixnet.net/blog/post/27331605", 
-        "https://leomoon173.pixnet.net/blog/post/6777767", 
-        "https://leomoon173.pixnet.net/blog/post/6777940", 
+urls = ["https://leomoon173.pixnet.net/blog/post/6777691",
+        "https://leomoon173.pixnet.net/blog/post/27331605",
+        "https://leomoon173.pixnet.net/blog/post/6777767",
+        "https://leomoon173.pixnet.net/blog/post/6777940",
         "https://leomoon173.pixnet.net/blog/post/6777982"]
 
 name_list = []; ingredient_list = []; kitchen_list = []; price_list = []
@@ -65,18 +67,20 @@ for price in price_list:
 search = input('請輸入食材：')
 if(search == "index"): search = ""
 output = pd.DataFrame(columns = ["名稱", "材料", "廚具", "市集賣價"])
+search_list = search.split(' ')
+
 for i in range(len(ingredient_list)):
-    if search in str(ingredient_list[i]):
-        output.loc[len(output)] = [name_list[i], ingredient_list[i], kitchen_list[i], price_list[i]]
+    for j in range(len(search_list)):
+        if(search_list[j] in ingredient_list[i]):
+            if(j == len(search_list) - 1):
+                output.loc[len(output)] = [name_list[i], ingredient_list[i], kitchen_list[i], price_list[i]]
+                break
+            else:
+                continue
+        else:
+            break
         
 output.市集賣價 = output.市集賣價.astype(int)
 output.sort_values(by = "市集賣價", inplace = True, ascending = False)
 output.index = [i + 1 for i in range(len(output))]
-
-if(search == ""): search = "index"
-html = output.to_html()
-text = open("牧場物語/" + search + ".html", "w", encoding="utf-8")
-text.write(html)
-text.close()
-
 display(output)
