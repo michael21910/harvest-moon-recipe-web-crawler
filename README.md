@@ -26,6 +26,8 @@ In the table, there are:
 * The kitchenware that you need  
 * The price when it is a 5 star dish  
   
+If you input the word "index", all of the recipes will be printed out.
+  
 ## Example  
 The user inputs: “油 牛奶”  
 The output should be as follows(DataFrame). 
