@@ -63,8 +63,8 @@ for price in price_list:
     if(price == "市集賣價"):
         price_list.remove(price)
     
-search = input('請輸入食材：')
-output = pd.DataFrame(columns = ["名稱", "材料", "廚具", "市集賣價"])
+search = input('請輸入食材(Please enter the ingredient)：')
+output = pd.DataFrame(columns = ["name", "ingredient", "kitchenware", "price"])
 search_list = search.split(' ')
 
 if(search != "index"):
@@ -82,7 +82,7 @@ else:
     for i in range(len(ingredient_list)):
         output.loc[len(output)] = [name_list[i], ingredient_list[i], kitchen_list[i], price_list[i]]
         
-output.市集賣價 = output.市集賣價.astype(int)
-output.sort_values(by = "市集賣價", inplace = True, ascending = False)
+output.price = output.price.astype(int)
+output.sort_values(by = "price", inplace = True, ascending = False)
 output.index = [i + 1 for i in range(len(output))]
-display(output)
+print(output)
