@@ -15,7 +15,7 @@ Now, I can finally enjoy this game that I haven't play since 14 years old.
   
 It's a pity that I forgot all of the recipes in this game. Thus, I decided to write a program to help me deal with this problem.  
   
-## How to use  
+## How to use :open_book:   
 The recipe is base on the webpages below:  
 [salad and soup](https://leomoon173.pixnet.net/blog/post/6777691) / [appetizer](https://leomoon173.pixnet.net/blog/post/27331605) / [main course](https://leomoon173.pixnet.net/blog/post/6777767) / [dessert](https://leomoon173.pixnet.net/blog/post/6777940) / [others](https://leomoon173.pixnet.net/blog/post/6777982)  
 You can enter multiple ingredients in Chinese(traditional), 1 space after each ingredient except the last one you input.  
@@ -28,7 +28,7 @@ In the table, there are:
   
 If you input the word "index", all of the recipes will be printed out.
   
-## Example  
+## Demo :eyes:  
 The user inputs: “油 牛奶”  
 The output should be as follows(DataFrame). 
 |   | 名稱 | 材料 | 廚具 | 市場賣價 |
