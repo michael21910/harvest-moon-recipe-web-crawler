@@ -55,4 +55,5 @@ The output should be as follows(DataFrame).
 | 2 | 蛋包飯 | [油, 牛奶, 雞蛋, 米飯] | 煎鍋 | 1000 |  
 | 3 | 煎雞蛋捲 | [油, 牛奶, 雞蛋] | - | 840 |  
 
-Michael Hsueh 09/07/2021
+## License
+[MIT](LICENSE) © Tsuen Hsueh
