@@ -25,7 +25,6 @@ Now, I can finally enjoy this game that I haven't play since 14 years old.
 It's a pity that I forgot all of the recipes in this game. Thus, I decided to write a program to help me deal with this problem.  
   
 ## Things you need to do :open_book:
-* Input the ingredient(s) you want to
 * Install the library "pandas"
 ```
 pip install pandas
@@ -38,6 +37,12 @@ pip install requests
 ```
 pip install BeautifulSoup
 ```
+* Clone this repository
+```
+git clone https://github.com/michael21910/harvest-moon-receipe-web-crawler.git
+```
+* Execute the program file "HM DS-recipe web crawler.py"
+* Input the ingredient(s) you want to
   
 ## What will you get :icecream:
 A nice dataframe, including four informations:
